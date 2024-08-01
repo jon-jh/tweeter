@@ -1,5 +1,7 @@
 nav {
   display: flex;
+  position: fixed;
+  top: 0;
   justify-content: space-between;
   height: 120px;
   width: 100%;
