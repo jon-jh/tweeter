@@ -5,7 +5,6 @@
 
 #tweet-text {
   width: inherit;
-  height: 35px;
   background-color: inherit;
   border: none;
   border-bottom: 4px solid #545149;
@@ -21,19 +20,27 @@
   /* Hides the scrollbar */
 }
 
-.new-tweet .above-tweet {
+.above-tweet {
   display: flex;
   justify-content: flex-start;
 }
 
-.new-tweet .under-tweet {
+.under-tweet {
   display: flex;
   justify-content: space-between;
   font-family: Bungee;
   font-weight: bold;
 }
 
-.new-tweet .under-tweet button {
+.under-tweet button {
   background-color: #4055a1;
   color: white;
+}
+
+.counter {
+  color: inherit;
+}
+
+.counter.negative {
+  color: red;
 }
