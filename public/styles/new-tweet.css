@@ -1,0 +1,12 @@
+.new-tweet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.new-tweet .under-tweet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
