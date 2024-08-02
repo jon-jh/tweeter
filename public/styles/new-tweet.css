@@ -1,12 +1,39 @@
-.new-tweet {
+.new-tweet form {
+  width: 100%;
+  padding: 20px;
+}
+
+#tweet-text {
+  width: inherit;
+  height: 35px;
+  background-color: inherit;
+  border: none;
+  border-bottom: 4px solid #545149;
+  resize: none;
+}
+
+#tweet-text:focus {
+  outline: none;
+}
+
+#tweet-text::-webkit-scrollbar {
+  display: none;
+  /* Hides the scrollbar */
+}
+
+.new-tweet .above-tweet {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .new-tweet .under-tweet {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  font-family: Bungee;
+  font-weight: bold;
+}
+
+.new-tweet .under-tweet button {
+  background-color: #4055a1;
+  color: white;
 }
