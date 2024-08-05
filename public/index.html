@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/posts.css" type="text/css" />
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -58,33 +59,40 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+
     <section class="new-tweet">
       <form method="post" action="/tweets/">
-        <span class=above-tweet>
+        <span class=tweet-header>
           <label for="tweet-text">What are you humming about?</label>
         </span>
         <textarea name="text" id="tweet-text" placeholder=""></textarea>
-        <div>
-          <span class="under-tweet">
+        <footer>
+          <span class="tweet-footer">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </span>
-        </div>
+        </footer>
       </form>
     </section>
 
     <section class="posts">
       <article>
-        <span class="above-post">
-          <label for="tweeter-name">Tweeter's Name Goes Here</label>
+        <span class="post-header">
+          <label for="tweeter-name">Name & Pic Here</label>
         </span>
         <textarea name="post" id="post-text" placeholder="Post Goes Here"></textarea>
-        <div>
-          <span class="under-post">
-            <label for="time-since-post">Time Since Post Here</label>
-            <label for="post-icons">Icons Go Here</label>
+        <footer>
+          <span class="post-footer">
+            <label for="time-since-post">xx minutes ago</label>
+
+            <form action="">
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-square-up-right"></i>
+              <i class="fa-solid fa-bookmark"></i>
+            </form>
+
           </span>
-        </div>
+        </footer>
       </article>
     </section>
 

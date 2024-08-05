@@ -1,9 +1,12 @@
 .new-tweet form {
   width: 100%;
   padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 #tweet-text {
+  height: 2em;
   width: inherit;
   background-color: inherit;
   border: none;
@@ -20,19 +23,20 @@
   /* Hides the scrollbar */
 }
 
-.above-tweet {
+.tweet-header {
   display: flex;
   justify-content: flex-start;
+  font-weight: 650;
 }
 
-.under-tweet {
+.tweet-footer {
   display: flex;
   justify-content: space-between;
   font-family: Bungee;
   font-weight: bold;
 }
 
-.under-tweet button {
+.tweet-footer button {
   background-color: #4055a1;
   color: white;
 }

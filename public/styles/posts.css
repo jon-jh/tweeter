@@ -2,18 +2,22 @@
   width: 100%;
   padding: 20px;
   border: 4px solid #545149;
+  border-radius: 5px;
 }
 
-.under-post {
+.post-footer {
   display: flex;
   justify-content: space-between;
   font-family: 'Source Sans 3';
+  font-size: smaller;
 }
 
-.under-post label {
+.post-footer form{
+word-spacing: 8px;
 }
 
 #post-text {
+  height: 2em;
   width: inherit;
   background-color: inherit;
   border: none;
@@ -26,7 +30,8 @@
   /* Hides the scrollbar */
 }
 
-.above-post {
+.post-header {
   display: flex;
   justify-content: flex-start;
+  padding-bottom: 2em;
 }
