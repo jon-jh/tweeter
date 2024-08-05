@@ -1,0 +1,32 @@
+.posts form {
+  width: 100%;
+  padding: 20px;
+  border: 4px solid #545149;
+}
+
+.under-post {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Source Sans 3';
+}
+
+.under-post label {
+}
+
+#post-text {
+  width: inherit;
+  background-color: inherit;
+  border: none;
+  border-bottom: 4px solid #545149;
+  resize: none;
+}
+
+#post-text::-webkit-scrollbar {
+  display: none;
+  /* Hides the scrollbar */
+}
+
+.above-post {
+  display: flex;
+  justify-content: flex-start;
+}

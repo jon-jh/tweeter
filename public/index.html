@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/posts.css" type="text/css" />
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -56,22 +57,39 @@
   </header>
 
   <!-- Page-specific (main) content here -->
-<main class="container">
-  <section class="new-tweet">
-    <form method="post" action="/tweets/">
-    <span class= above-tweet>
-      <label for="tweet-text">What are you humming about?</label>
-    </span>
-      <textarea name="text" id="tweet-text" placeholder=""></textarea>
-      <div>
-        <span class="under-tweet">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+  <main class="container">
+    <section class="new-tweet">
+      <form method="post" action="/tweets/">
+        <span class=above-tweet>
+          <label for="tweet-text">What are you humming about?</label>
         </span>
-      </div>
-    </form>
-  </section>
-</main>
+        <textarea name="text" id="tweet-text" placeholder=""></textarea>
+        <div>
+          <span class="under-tweet">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </span>
+        </div>
+      </form>
+    </section>
+
+    <section class="posts">
+      <form method="" action="">
+        <!-- blank method and action for now -->
+        <span class="above-post">
+          <label for="tweeter-name">Tweeter's Name Goes Here</label>
+        </span>
+        <textarea name="post" id="post-text" placeholder="Post Goes Here"></textarea>
+        <div>
+          <span class="under-post">
+            <label for="time-since-post">Time Since Post Here</label>
+            <label for="post-icons">Icons Go Here</label>
+          </span>
+        </div>
+      </form>
+    </section>
+
+  </main>
 </body>
 
 </html>
