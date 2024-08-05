@@ -80,16 +80,20 @@
         <span class="post-header">
           <label for="tweeter-name">Name & Pic Here</label>
         </span>
-        <textarea name="post" id="post-text" placeholder="Post Goes Here"></textarea>
+
+        <textarea name="post" id="post-text" placeholder="Post Goes Here" disabled></textarea>
+        <!-- The finished post / tweet is defined as a disabled text box here. Not sure if it should be this way but it works. -->
+
         <footer>
           <span class="post-footer">
             <label for="time-since-post">xx minutes ago</label>
 
             <form action="">
-              <i class="fa-solid fa-heart"></i>
-              <i class="fa-solid fa-square-up-right"></i>
-              <i class="fa-solid fa-bookmark"></i>
+              <i class="fa-solid fa-heart" id="icon-heart"></i>
+              <i class="fa-solid fa-square-up-right" id="icon-share"></i>
+              <i class="fa-solid fa-bookmark" id="icon-save"></i>
             </form>
+            <!-- Icons have each been given their own ID. -->
 
           </span>
         </footer>

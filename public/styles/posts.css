@@ -5,15 +5,14 @@
   border-radius: 5px;
 }
 
-.post-footer {
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Source Sans 3';
-  font-size: smaller;
+.posts article:hover {
+  box-shadow: 7px 7px 0px #cacae1
 }
 
-.post-footer form{
-word-spacing: 8px;
+.post-header {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 2em;
 }
 
 #post-text {
@@ -30,8 +29,19 @@ word-spacing: 8px;
   /* Hides the scrollbar */
 }
 
-.post-header {
+.post-footer {
   display: flex;
-  justify-content: flex-start;
-  padding-bottom: 2em;
+  justify-content: space-between;
+}
+
+/* Footer Icons */
+
+.post-footer form {
+  word-spacing: 12px;
+}
+
+.post-footer form i:hover {
+  transition: 0.2s ease;
+  transform: scale(1.2);
+  color: rgb(44, 114, 255);
 }
