@@ -19,7 +19,7 @@ html {
 
 body {
   color: #545149;
-  background-color: inherit;
+  background-color: #f4f1ec;
   font-size: 24px;
   padding-top: 120px;
   font-family: 'Source Sans 3', sans-serif;
@@ -33,5 +33,5 @@ body {
 main {
   width: 90%;
   margin: 0 auto;
-  background-color: #f4f1ec;
+  background-color: inherit;
 }
