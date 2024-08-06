@@ -1,3 +1,5 @@
+/* Tweet creating form */
+
 .new-tweet form {
   width: 100%;
   padding: 20px;
@@ -20,7 +22,6 @@
 
 #tweet-text::-webkit-scrollbar {
   display: none;
-  /* Hides the scrollbar */
 }
 
 .tweet-header {
@@ -49,7 +50,7 @@
   color: rgb(255, 82, 82);
 }
 
-/* "Tweets" that have already been "posted" */
+/* Tweets that have already been posted */
 
 .posts article {
   width: 100%;
@@ -64,7 +65,20 @@
 
 .post-header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  /* Ensure space between the two elements */
+  align-items: center;
+  /* Align items vertically in the center */
+}
+
+.post-header-left {
+  display: flex;
+  padding-bottom: 2em;
+}
+
+.post-header-right {
+  display: flex;
+  justify-content: flex-end;
   padding-bottom: 2em;
 }
 
@@ -79,7 +93,6 @@
 
 #post-text::-webkit-scrollbar {
   display: none;
-  /* Hides the scrollbar */
 }
 
 .post-footer {

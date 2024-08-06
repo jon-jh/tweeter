@@ -47,12 +47,12 @@
 
   <!-- Header -->
 
-<header>
-  <span>
-    <img class="avatar" src="/images/profile-hex.png" alt="" />
-  </span>
-  <h3>@user</h3>
-</header>
+  <header>
+    <span>
+      <img class="avatar" src="/images/profile-hex.png" alt="" />
+    </span>
+    <h3>@user</h3>
+  </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
@@ -72,29 +72,31 @@
       </form>
     </section>
 
-    <section class="posts">
-      <article>
-        <span class="post-header">
-          <label for="tweeter-name">user here</label>
-        </span>
+<section class="posts">
+  <article>
+    <div class="post-header">
+      <div class="post-header-left">
+        <label for="user-img">img</label>
+        <label for="user-name">name</label>
+      </div>
+      <div class="post-header-right">
+        <label for="user-handle">@user</label>
+      </div>
+    </div>
+    <p name="post" id="post-text" placeholder="Post Goes Here"></p>
+    <footer>
+      <div class="post-footer">
+        <label for="time-since-post">time-counter</label>
+        <div>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-square-up-right"></i>
+          <i class="fa-solid fa-bookmark"></i>
+        </div>
+      </div>
+    </footer>
+  </article>
+</section>
 
-        <p name="post" id="post-text" placeholder="Post Goes Here"></p>
-
-        <footer>
-          <span class="post-footer">
-            
-            <label for="time-since-post">time since posted label</label>
-
-            <div>
-              <i class="fa-solid fa-heart"></i>
-              <i class="fa-solid fa-square-up-right"></i>
-              <i class="fa-solid fa-bookmark"></i>
-            </div>
-
-          </span>
-        </footer>
-      </article>
-    </section>
 
   </main>
 </body>
