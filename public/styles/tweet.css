@@ -49,6 +49,8 @@
   color: rgb(255, 82, 82);
 }
 
+/* "Tweets" that have already been "posted" */
+
 .posts article {
   width: 100%;
   padding: 20px;
@@ -87,11 +89,11 @@
 
 /* Footer Icons */
 
-.post-footer form {
+.post-footer div {
   word-spacing: 12px;
 }
 
-.post-footer form i:hover {
+.post-footer div i:hover {
   transition: 0.2s ease;
   transform: scale(1.2);
   color: rgb(44, 114, 255);
