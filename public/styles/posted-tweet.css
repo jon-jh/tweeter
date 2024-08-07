@@ -1,0 +1,55 @@
+.posted-tweet-container article {
+  width: 100%;
+  padding: 20px;
+  border: 4px solid #545149;
+  border-radius: 5px;
+}
+
+.posted-tweet-container article:hover {
+  box-shadow: 7px 7px 0px #cacae1
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  padding-bottom: 2em;
+}
+
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 2em;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer div {
+  word-spacing: 12px;
+}
+
+.footer div i:hover {
+  transition: 0.2s ease;
+  transform: scale(1.2);
+  color: rgb(44, 114, 255);
+}
+
+#posted-text {
+  height: 2em;
+  width: inherit;
+  background-color: inherit;
+  border: none;
+  border-bottom: 4px solid #545149;
+  resize: none;
+}
+
+#posted-text::-webkit-scrollbar {
+  display: none;
+}

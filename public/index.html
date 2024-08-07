@@ -23,7 +23,8 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/posted-tweet.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -57,7 +58,8 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
 
-    <section class="new-tweet">
+    <!-- Create New Tweet Container -->
+    <section class="new-tweet-container">
       <form method="post" action="/tweets/">
         <span class=tweet-header>
           <label for="tweet-text">What are you humming about?</label>
@@ -72,31 +74,31 @@
       </form>
     </section>
 
-<section class="posts">
-  <article>
-    <div class="post-header">
-      <div class="post-header-left">
-        <label for="user-img">img</label>
-        <label for="user-name">name</label>
-      </div>
-      <div class="post-header-right">
-        <label for="user-handle">@user</label>
-      </div>
-    </div>
-    <p name="post" id="post-text" placeholder="Post Goes Here"></p>
-    <footer>
-      <div class="post-footer">
-        <label for="time-since-post">time-counter</label>
-        <div>
-          <i class="fa-solid fa-heart"></i>
-          <i class="fa-solid fa-square-up-right"></i>
-          <i class="fa-solid fa-bookmark"></i>
+    <!-- Posted Tweets Container -->
+    <section class="posted-tweet-container">
+      <article>
+        <div class="header">
+          <div class="header-left">
+            <label for="user-img">img</label>
+            <label for="user-name">name</label>
+          </div>
+        <div class="header-right">
+          <label for="user-handle">@user</label>
         </div>
-      </div>
-    </footer>
-  </article>
-</section>
-
+        </div>
+        <p name="post" id="posted-text" placeholder="Post Goes Here"></p>
+        <footer>
+          <div class="footer">
+            <label for="time-since-post">time-counter</label>
+            <div>
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-square-up-right"></i>
+              <i class="fa-solid fa-bookmark"></i>
+            </div>
+          </div>
+        </footer>
+      </article>
+    </section>
 
   </main>
 </body>
