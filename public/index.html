@@ -20,11 +20,11 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- App CSS Links -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/posted-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/nav.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" />
+  <link rel="stylesheet" href="/styles/posted-tweet.css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -50,7 +50,7 @@
 
   <header>
     <span>
-      <img class="avatar" src="/images/profile-hex.png" alt="" />
+      <img class="avatars" src="/images/profile-hex.png" alt="" />
     </span>
     <h3 class="name">name</h3>
   </header>
@@ -59,13 +59,12 @@
   <main class="container">
 
     <!-- Create New Tweet Container -->
-    <section class="new-tweet-container">
+    <article class="new-tweet-container">
       <form method="post" action="/tweets/">
         <span class=new-tweet-header>
           <label for="tweet-text">What are you humming about?</label>
         </span>
         <textarea name="text" id="tweet-text" placeholder=""></textarea>
-        
         <!-- Submit Tweet Button Here -->
         <footer>
           <span class="new-tweet-footer">
@@ -74,37 +73,37 @@
           </span>
         </footer>
         <!-- Submit Tweet Button Here -->
-      
       </form>
-    </section>
+    </article>
 
     <!-- Posted Tweet Container -->
-    <section class="posted-tweet-container">
-      <article>
-        <div class="posted-tweet-header">
-          <div class="header-left">
-            <label for="avatar">avatar</label>
-             <label for="name">name</label> 
-          </div>
+<section id="tweet-container">
+    
+  <article class="posted-tweet-container">
+      <div class="posted-tweet-header">
+        <div class="header-left">
+          <label for="avatars">avatars</label>
+          <label for="name">name</label>
+        </div>
 
         <div class="header-right">
-          <label for="handle">@user</label>
+          <label for="handle">handle</label>
         </div>
-        </div>
-        <p id="content">Post Goes Here</p>
-        <footer>
-          <div class="posted-tweet-footer">
-            <label for="created_at">time-counter</label>
-            <div>
-              <i class="fa-solid fa-heart"></i>
-              <i class="fa-solid fa-square-up-right"></i>
-              <i class="fa-solid fa-bookmark"></i>
-            </div>
+      </div>
+      <p id="content">text</p>
+      <footer>
+        <div class="posted-tweet-footer">
+          <label for="created_at">created_at</label>
+          <div>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-square-up-right"></i>
+            <i class="fa-solid fa-bookmark"></i>
           </div>
-        </footer>
-      </article>
-    </section>
+        </div>
+      </footer>
+    </article>
 
+</section>
   </main>
 </body>
 

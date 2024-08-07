@@ -3,46 +3,54 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+$(document).ready(() => {
 
-// outline: create a function that takes an object (example tweet with pre made structure) as its argument.
-// the function will use jqery to create an <article class=tweet></article>
+console.log('Inside the client.js file.')
 
-function createTweetElement(data) { // take in the tweet data
+// Request all the data from the /tweets page to see what the object looks like.
 
-  const $tweet = $(`<article class="tweet"></article>`)
-  //jquery creates a new article class 'tweet'
-  //sort the data into the structure we want
+$.ajax({
+  method: 'GET',
+  url: '/tweets',
+  success: (response) => {
+    console.log(response)
+  }
+})
 
-  const html = `
-  <p>
-  <img src="${tweet.user.avatars}">
-  <p>"${tweet.user.name}"</p>
-  <p>"${tweet.user.handle}"</p>
-  <p>"${tweet.user.content.text}"</p>
-  </p>`;
+// Create a jqery element to test in developer tools.
+// const $tweet = $('<article>');
+// console.log($tweet)
 
-  $tweet.html(html);
+// Paste entire posted-tweet-container into jquery using $(``)
+// Name it as a new variable.
 
-  return $tweet;
-}
+const $tweet = $(` 
+  <article class="posted-tweet-container">
+    <div class="posted-tweet-header">
+      <div class="header-left">
+        <label for="avatars">avatars</label>
+        <label for="name">name</label>
+      </div>
+      <div class="header-right">
+        <label for="handle">handle</label>
+      </div>
+    </div>
+    <p id="content">text</p>
+    <footer>
+      <div class="posted-tweet-footer">
+        <label for="created_at">created_at</label>
+        <div>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-square-up-right"></i>
+          <i class="fa-solid fa-bookmark"></i>
+        </div>
+      </div>
+    </footer>
+  </article>   
+`);
 
-// Test / driver code (temporary). Eventually will get this from the server.
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-    "handle": "@SirIsaac"
-  },
-  "content": {
-    "text": "If I have seen further it is by standing on the shoulders of giants"
-  },
-  "created_at": 1461116232227
-}
+const $postedTweetContainer = $('#tweet-container');
 
-const $tweet = createTweetElement(tweetData);
+$postedTweetContainer.prepend($tweet);
 
-// Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
-$('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-
-
+});

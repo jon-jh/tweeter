@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log('The DOM is ready to be manipulated with jQuery.')
+  console.log('Inside the composer character counter js file.')
 });
 
 
