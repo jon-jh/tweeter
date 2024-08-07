@@ -9,7 +9,7 @@
   box-shadow: 7px 7px 0px #cacae1
 }
 
-.header {
+.posted-tweet-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,25 +17,27 @@
 
 .header-left {
   display: flex;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
+  gap: 2em;
 }
 
 .header-right {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
+  padding-right: 3em;
 }
 
-.footer {
+.posted-tweet-footer {
   display: flex;
   justify-content: space-between;
 }
 
-.footer div {
+.posted-tweet-footer div {
   word-spacing: 12px;
 }
 
-.footer div i:hover {
+.posted-tweet-footer div i:hover {
   transition: 0.2s ease;
   transform: scale(1.2);
   color: rgb(44, 114, 255);

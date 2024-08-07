@@ -52,7 +52,7 @@
     <span>
       <img class="avatar" src="/images/profile-hex.png" alt="" />
     </span>
-    <h3>@user</h3>
+    <h3 class="name">name</h3>
   </header>
 
   <!-- Page-specific (main) content here -->
@@ -61,12 +61,12 @@
     <!-- Create New Tweet Container -->
     <section class="new-tweet-container">
       <form method="post" action="/tweets/">
-        <span class=tweet-header>
+        <span class=new-tweet-header>
           <label for="tweet-text">What are you humming about?</label>
         </span>
         <textarea name="text" id="tweet-text" placeholder=""></textarea>
         <footer>
-          <span class="tweet-footer">
+          <span class="new-tweet-footer">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </span>
@@ -74,22 +74,23 @@
       </form>
     </section>
 
-    <!-- Posted Tweets Container -->
+    <!-- Posted Tweet Container -->
     <section class="posted-tweet-container">
       <article>
-        <div class="header">
+        <div class="posted-tweet-header">
           <div class="header-left">
-            <label for="user-img">img</label>
-            <label for="user-name">name</label>
+            <label for="avatar">avatar</label>
+             <label for="name">name</label> 
           </div>
+
         <div class="header-right">
-          <label for="user-handle">@user</label>
+          <label for="handle">@user</label>
         </div>
         </div>
-        <p name="post" id="posted-text" placeholder="Post Goes Here"></p>
+        <p id="content">Post Goes Here</p>
         <footer>
-          <div class="footer">
-            <label for="time-since-post">time-counter</label>
+          <div class="posted-tweet-footer">
+            <label for="created_at">time-counter</label>
             <div>
               <i class="fa-solid fa-heart"></i>
               <i class="fa-solid fa-square-up-right"></i>

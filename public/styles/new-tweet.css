@@ -5,20 +5,20 @@
   padding-bottom: 80px;
 }
 
-.tweet-header {
+.new-tweet-header {
   display: flex;
   justify-content: flex-start;
   font-weight: 650;
 }
 
-.tweet-footer {
+.new-tweet-footer {
   display: flex;
   justify-content: space-between;
   font-family: Bungee;
   font-weight: bold;
 }
 
-.tweet-footer button {
+.new-tweet-footer button {
   background-color: #4055a1;
   color: white;
 }
