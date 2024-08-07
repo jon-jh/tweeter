@@ -5,8 +5,8 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   const maxLength = 140;
-  const textBox = $('.container .new-tweet form textarea');
-  const counter = $('.container .new-tweet .counter');
+  const textBox = $('.new-tweet-container form textarea');
+  const counter = $('.new-tweet-container .counter');
 
   textBox.on('input', function() {
     const remaining = maxLength - $(this).val().length;
