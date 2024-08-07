@@ -21,7 +21,7 @@ $.ajax({
 // const $tweet = $('<article>');
 // console.log($tweet)
 
-// Paste entire posted-tweet-container into jquery using $(``)
+// Paste entire (finished & styled as needed) posted-tweet-container into jquery using $(``)
 // Name it as a new variable.
 
 const $tweet = $(` 
@@ -49,7 +49,8 @@ const $tweet = $(`
   </article>   
 `);
 
-const $postedTweetContainer = $('#tweet-container');
+const $postedTweetContainer = $('#tweet-container'); 
+// Use the class id tweet-container which holds the posted tweet I want to copy.
 
 $postedTweetContainer.prepend($tweet);
 
