@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log('Inside the composer character counter js file.')
+  console.log('Inside the composer character counter js file.');
 });
 
 
@@ -10,7 +10,7 @@ $(document).ready(function() {
 
   textBox.on('input', function() {
     const remaining = maxLength - $(this).val().length;
-    counter.text(remaining)
+    counter.text(remaining);
 
     if (remaining < 0) {
       counter.addClass('negative');
@@ -18,5 +18,5 @@ $(document).ready(function() {
       counter.removeClass('negative');
     }
     
-  })
-})
+  });
+});
