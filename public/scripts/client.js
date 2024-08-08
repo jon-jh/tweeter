@@ -65,17 +65,17 @@ $(document).ready(() => {
   <article class="posted-tweet-container">
     <div class="posted-tweet-header">
       <div class="header-left">
-        <label for="avatars">${data.avatars}</label>
-        <label for="name">${data.name}</label>
+        <img src="${data.avatars}" alt="img">
+        <p id="name">${data.name}</p>
       </div>
       <div class="header-right">
-        <label for="handle">@${data.handle}</label>
+        <p id="handle">@${data.handle}</p>
       </div>
     </div>
     <p id="content">${data.content}</p>
     <footer>
       <div class="posted-tweet-footer">
-        <label for="created_at">${data.created_at}</label>
+        <p id="created_at">${data.created_at}</p>
         <div>
           <i class="fa-solid fa-heart"></i>
           <i class="fa-solid fa-square-up-right"></i>

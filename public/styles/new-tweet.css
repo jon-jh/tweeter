@@ -19,7 +19,8 @@
 }
 
 .new-tweet-footer button {
-  background-color: #4055a1;
+  border-radius: 10px;
+  background-color: #4c65be;
   color: white;
 }
 
