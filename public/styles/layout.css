@@ -19,9 +19,10 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+background-color: #f7fcff;
+  background-image: url("https://www.transparenttextures.com/patterns/maze-white.png");
   font-size: 24px;
-  padding-top: 120px;
+  padding-top: 100px;
   font-family: 'Source Sans 3', sans-serif;
 }
 
@@ -33,5 +34,6 @@ body {
 main {
   width: 90%;
   margin: 0 auto;
+  background-image: inherit;
   background-color: inherit;
 }
