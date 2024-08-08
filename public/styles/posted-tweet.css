@@ -3,6 +3,7 @@
   padding: 20px;
   border: 4px solid #545149;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 .posted-tweet-container:hover {
@@ -43,7 +44,7 @@
   color: rgb(44, 114, 255);
 }
 
-#posted-text {
+#content {
   height: 2em;
   width: inherit;
   background-color: inherit;
@@ -52,6 +53,6 @@
   resize: none;
 }
 
-#posted-text::-webkit-scrollbar {
+#content::-webkit-scrollbar {
   display: none;
 }
