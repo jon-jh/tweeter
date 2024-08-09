@@ -3,7 +3,9 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(document).ready(() => {
+
 
   console.log('Inside the client.js file.');
 
@@ -94,8 +96,10 @@ $(document).ready(() => {
     </footer>
   </article>   
 `);
+    // create a variable to hold the date in a formatted form using the timeago library which has been imported into index.html.
+    const formattedDate = timeago.format(data.created_at);
+    $tweetTemplate.find('#created_at').text(formattedDate);
 
-    // 3. Remember to return the element created by the createTweet function.
     return $tweetTemplate;
   };
 
