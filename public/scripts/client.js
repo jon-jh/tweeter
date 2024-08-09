@@ -11,11 +11,11 @@ $(document).ready(() => {
   const someTestData = {
     user: {
       name: 'Largehands',
-      avatars: '',
+      avatars: src = "/images/halo.png",
       handle: '@halo_elite',
     },
     content: {
-      text: 'YEEAHHGHHH!!!'
+      text: 'Aaaah! Wubadaugh!!!'
     },
     created_at: 1
   };
@@ -117,7 +117,7 @@ $(document).ready(() => {
       success: () => {
         loadTweets();
       }
-      
+
     });
   })
 
