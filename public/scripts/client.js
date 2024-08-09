@@ -23,35 +23,45 @@ $(document).ready(() => {
 
   // 5. Create Test Data Object
   const someTestData = {
-    avatars: 'picture',
-    name: 'Lulu Largehands',
-    handle: 'halo_elite',
-    created_at: 'time',
-    content: 'AAAHHH WOLOLO!!!'
+    user: {
+      name: 'Largehands',
+      avatars: '',
+      handle: '@halo_elite',
+    },
+    content: {
+      text: 'YEEAHHGHHH!!!'
+    },
+    created_at: 1
   };
   const someTestData2 = {
-    avatars: 'picture',
-    name: 'Lorflorf',
-    handle: 'spartanh8r',
-    created_at: 'time',
-    content: 'WORLORLOR!!!'
+    user: {
+      name: 'Lorflorf',
+      avatars: '',
+      handle: '@spartanh8r',
+    },
+    content: {
+      text: 'RAAAGGHWOLOROR!'
+    },
+    created_at: 1
   };
 
-  // 6. Create Test Array of Data Objects, make a helper function.
+  // 6. Create Test Array of Data Objects to match the servers array of objects structure.
 
   const arrayOfTweets = [
     someTestData,
     someTestData2
   ];
 
+  console.log(arrayOfTweets)
+
   // 7. Move the call for the createTweet function and the .prepend function inside this loop so that they run for every object in the array.
 
   const renderTweets = (arrayOfTweets) => {
     for (const tweet of arrayOfTweets) {
-    // 4. Call the createTweet function and assign it's returned element to $tweet
+      // 4. Call the createTweet function and assign it's returned element to $tweet
       const $tweet = createTweet(tweet);
       $postedTweetContainer.prepend($tweet);
-    // $tweet manipulates the DOM, adding each tweet to the live webpage.
+      // $tweet manipulates the DOM, adding each tweet to the live webpage.
     }
   };
 
@@ -65,14 +75,13 @@ $(document).ready(() => {
   <article class="posted-tweet-container">
     <div class="posted-tweet-header">
       <div class="header-left">
-        <img src="${data.avatars}" alt="img">
-        <p id="name">${data.name}</p>
+        <img src="${data.user.avatars}" alt="img">
+        <div class ="name">${data.user.name}</div>
       </div>
-      <div class="header-right">
-        <p id="handle">@${data.handle}</p>
+      <div class="header-right">${data.user.handle}</div>
       </div>
     </div>
-    <p id="content">${data.content}</p>
+    <p id="content">${data.content.text}</p>
     <footer>
       <div class="posted-tweet-footer">
         <p id="created_at">${data.created_at}</p>
@@ -97,5 +106,25 @@ $(document).ready(() => {
 
 
   renderTweets(arrayOfTweets);
+
+  // Getting the tweets from the server instead of this hard coded file.
+
+  // Use ajax to get the array of information from the server instead of using the hard coded example tweets. We make a GET request to the location of the arrays, (/tweets), and on success:(anything) => { console.log (anything)} - this will console.log the response from the server which is going to be the array of tweets (anything).
+
+  $.ajax({
+    method: 'GET',
+    url: '/tweets',
+    success: (serverResponseTweets) => {
+      console.log(serverResponseTweets)
+      // pass the response from the server into our renderTweets function.
+      renderTweets(serverResponseTweets);
+    }
+  })
+
+
+
+
+
+
 
 });

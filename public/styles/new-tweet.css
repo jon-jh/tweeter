@@ -23,9 +23,20 @@
 }
 
 .new-tweet-footer button {
-  border-radius: 10px;
   background-color: #4c65be;
+  border: solid #4c65be;
+  border-radius: 25px;
   color: #cacae1;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.new-tweet-footer button:hover {
+  color: #545149;
+}
+
+.new-tweet-footer button:active {
+  border: solid #545149;
 }
 
 /* Counter Styles */

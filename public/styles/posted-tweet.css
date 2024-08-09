@@ -11,7 +11,7 @@
 
 .posted-tweet-container:hover {
   transition: 0.2s ease;
-  box-shadow: 5px 5px 0px #4c65be;
+  box-shadow: 5px 5px 0px #4c65be, -1px -1px 0px #535149;
 }
 
 /* Header Styles */
@@ -24,23 +24,21 @@
 
 .header-left {
   display: flex;
-  gap: 2em;
+  gap: 1em;
+  height: inherit;
 }
 
-.header-left p {
+.header-left div {
+  display: flex;
   padding-left: 5px;
   padding-right: 5px;
   color: #4c65be;
   border: solid #4c65be;
   border-radius: 25px;
+  flex-direction: column-reverse;
+  justify-content: center;
 }
 
-.header-right {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 3em;
-  color: #535149;
-}
 
 /* Footer Styles */
 .posted-tweet-footer {
