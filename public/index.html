@@ -28,7 +28,7 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
     integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -63,7 +63,8 @@
   <main class="container">
 
     <!-- Create New Tweet Container -->
-    <article class="new-tweet-container">
+    <!-- It MUST be a form, not an article, or it does not work to get it with jquery later -->
+    <form class="new-tweet-container">
       <form method="post" action="/tweets/">
         <span class=new-tweet-header>
           <label for="tweet-text">What are you humming about?</label>
@@ -78,7 +79,7 @@
         </footer>
         <!-- Submit Tweet Button Here -->
       </form>
-    </article>
+    </form>
 
     <section id="tweet-container">
       <!-- Posted Tweet Container (Cut - Pasted into client.js jquery to dynamically create instead of being hard-coded)-->

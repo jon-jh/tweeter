@@ -46,6 +46,9 @@
   justify-content: space-between;
   align-items: center;
   height: 30px;
+}
+
+.posted-tweet-footer div {
   word-spacing: 10px;
 }
 
@@ -60,7 +63,7 @@
   font-weight: 500;
   margin-left: 1em;
   margin-right: 1em;
-  height: 1.5em;
+  height: fit-content;
   background-color: inherit;
   background-image: inherit;
   border: none;

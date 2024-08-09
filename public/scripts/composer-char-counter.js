@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   const maxLength = 140;
-  const textBox = $('.new-tweet-container form textarea');
+  const textBox = $('.new-tweet-container textarea');
   const counter = $('.new-tweet-container .counter');
 
   textBox.on('input', function() {
@@ -17,6 +17,6 @@ $(document).ready(function() {
     } else {
       counter.removeClass('negative');
     }
-    
+
   });
 });

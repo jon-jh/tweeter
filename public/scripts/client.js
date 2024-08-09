@@ -3,25 +3,9 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
 $(document).ready(() => {
 
-
   console.log('Inside the client.js file.');
-
-  // Request all the data from the /tweets page to see what the object looks like.
-
-  $.ajax({
-    method: 'GET',
-    url: '/tweets',
-    success: (response) => {
-      console.log(response);
-    }
-  });
-
-  // Create a jqery element to test in developer tools.
-  // const $tweet = $('<article>');
-  // console.log($tweet)
 
   // 5. Create Test Data Object
   const someTestData = {
@@ -35,33 +19,20 @@ $(document).ready(() => {
     },
     created_at: 1
   };
-  const someTestData2 = {
-    user: {
-      name: 'Lorflorf',
-      avatars: '',
-      handle: '@spartanh8r',
-    },
-    content: {
-      text: 'RAAAGGHWOLOROR!'
-    },
-    created_at: 1
-  };
 
-  // 6. Create Test Array of Data Objects to match the servers array of objects structure.
-
+  // 7. Create Test Array of Data Objects to match the servers array of objects structure.
   const arrayOfTweets = [
-    someTestData,
-    someTestData2
+    someTestData
   ];
 
-  console.log(arrayOfTweets)
 
-  // 7. Move the call for the createTweet function and the .prepend function inside this loop so that they run for every object in the array.
+  // 8. Move the call for the createTweet function and the .prepend function inside this loop so that they run for every object in the array.
 
   const renderTweets = (arrayOfTweets) => {
     for (const tweet of arrayOfTweets) {
-      // 4. Call the createTweet function and assign it's returned element to $tweet
-      const $tweet = createTweet(tweet);
+
+      const $tweet = createTweet(tweet);  // 4. Call the createTweet function and assign it's returned element to $tweet
+
       $postedTweetContainer.prepend($tweet);
       // $tweet manipulates the DOM, adding each tweet to the live webpage.
     }
@@ -71,8 +42,7 @@ $(document).ready(() => {
   const createTweet = (data) => {
     // 1. Paste entire (finished & styled as needed) posted-tweet-container into jquery using $(``)
     // 2. Name it as a new variable.
-
-    // 5. Replace hard-coded object paramaters with object id's ${}
+    // 6. Replace hard-coded object paramaters with object id's ${}
     const $tweetTemplate = $(` 
   <article class="posted-tweet-container">
     <div class="posted-tweet-header">
@@ -115,20 +85,42 @@ $(document).ready(() => {
 
   // Use ajax to get the array of information from the server instead of using the hard coded example tweets. We make a GET request to the location of the arrays, (/tweets), and on success:(anything) => { console.log (anything)} - this will console.log the response from the server which is going to be the array of tweets (anything).
 
-  $.ajax({
-    method: 'GET',
-    url: '/tweets',
-    success: (serverResponseTweets) => {
-      console.log(serverResponseTweets)
-      // pass the response from the server into our renderTweets function.
-      renderTweets(serverResponseTweets);
-    }
+  const loadTweets = function() {
+
+    $.ajax({
+      method: 'GET',
+      url: '/tweets',
+      success: (serverResponseTweets) => {
+        console.log(serverResponseTweets);
+        // pass the response from the server into our renderTweets function.
+        renderTweets(serverResponseTweets);
+      }
+    });
+  };
+
+  // Prevent the default action of 'Submit" which reloads the page. This does not prevent the data from being submitted.
+
+  // Grab the new-tweet-container to get the submit (tweet) button.
+  const $form = $('.new-tweet-container');
+  // Listen for submit event on the form.
+  $form.on('submit', (event) => {
+    event.preventDefault();
+    const formData = $form.serialize();
+    // verify the form data is being sent.
+    console.log(formData)
+    // POST the serialized form data with ajax.
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: formData,
+      // On submit, load tweets. (no refresh)
+      success: () => {
+        loadTweets();
+      }
+      
+    });
   })
 
-
-
-
-
-
-
-});
+  // On Page Load, load tweets.
+  loadTweets();
+})
