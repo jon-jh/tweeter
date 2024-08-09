@@ -1,16 +1,20 @@
+/* Container Styles */
 .new-tweet-container form {
   width: 100%;
   padding: 20px;
   padding-top: 80px;
   padding-bottom: 80px;
+  color: #cacae1;
 }
 
+/* Header Styles */
 .new-tweet-header {
   display: flex;
   justify-content: flex-start;
   font-weight: 650;
 }
 
+/* Footer Styles */
 .new-tweet-footer {
   display: flex;
   justify-content: space-between;
@@ -21,24 +25,29 @@
 .new-tweet-footer button {
   border-radius: 10px;
   background-color: #4c65be;
-  color: white;
+  color: #cacae1;
 }
 
+/* Counter Styles */
 .counter {
   color: inherit;
 }
 
 .counter.negative {
-  color: rgb(255, 82, 82);
+  color: tomato;
 }
 
+/* Tweet Text Styles */
 #tweet-text {
-  height: 2em;
+  margin-top: 10px;
+  height: 1.5em;
+  font-weight: 500;
   width: inherit;
   background-color: inherit;
   border: none;
   border-bottom: 4px solid #545149;
   resize: none;
+  color: #cacae1;
 }
 
 #tweet-text:focus {

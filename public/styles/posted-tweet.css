@@ -1,17 +1,20 @@
+/* Container Styles */
 .posted-tweet-container {
-  background-color: white;
+  background-color: #0e0f14;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-tire.png");
   width: 100%;
   padding: 20px;
-  border: 4px solid #7d7d8f;
-  border-radius: 25px;
-  margin-bottom: 25px;
+  border: 4px solid #535149;
+  border-radius: 30px;
+  margin-bottom: 30px;
 }
 
 .posted-tweet-container:hover {
-  transition: 1s ease;
-  box-shadow: 5px 5px 0px #4c65be
+  transition: 0.2s ease;
+  box-shadow: 5px 5px 0px #4c65be;
 }
 
+/* Header Styles */
 .posted-tweet-header {
   display: flex;
   justify-content: space-between;
@@ -27,7 +30,8 @@
 .header-left p {
   padding-left: 5px;
   padding-right: 5px;
-  border: solid #cacae1;
+  color: #4c65be;
+  border: solid #4c65be;
   border-radius: 25px;
 }
 
@@ -35,9 +39,10 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 3em;
-  color: #cacae1;;
+  color: #535149;
 }
 
+/* Footer Styles */
 .posted-tweet-footer {
   display: flex;
   justify-content: space-between;
@@ -49,17 +54,20 @@
 .posted-tweet-footer div i:hover {
   transition: 0.2s ease;
   transform: scale(1.2);
-  color: #4c65be
+  color: tomato;
 }
 
+/* Content Styles */
 #content {
   font-weight: 500;
   margin-left: 1em;
   margin-right: 1em;
   height: 1.5em;
   background-color: inherit;
+  background-image: inherit;
   border: none;
-  border-bottom: 4px solid #cacae1;
+  color: #cacae1;
+  border-bottom: 4px solid #535149;
   resize: none;
 }
 
