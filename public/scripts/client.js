@@ -107,6 +107,10 @@ $(document).ready(() => {
   };
 
   const $form = $('.new-tweet-container');
+  // Function to show hidden messages
+  function showMessage(message) {
+    $('.message-container').text(message).slideDown().delay(3000).slideUp();
+  }
 
   // Allow form submission on Enter key press since 'preventDefault' is stopping it. 'Enter' && !event.shiftKey means if it's not enter+shiftkey which normally spaces a textbox to a newline instead of submitting. 
 
@@ -122,11 +126,11 @@ $(document).ready(() => {
     event.preventDefault();
     // Use jquery to check if the .counter.negative class exists (this is how to do so), if so, alert with message and return; (nothing).
     if ($('.counter.negative').length > 0) {
-      alert('The length of the tweet is longer than 140 :O');
+      showMessage('woops... over limit');
       return;
       // Same thing but check if the value (contents of the text box) of the box label #tweet-text (id=tweet-text) is empty '' (.trim will make sure to remove any blank spaces just in case)
     } else if ($('#tweet-text').val().trim() === '') {
-      alert('What do you want to share?');
+      showMessage('what will you share today?');
       return;
     }
 

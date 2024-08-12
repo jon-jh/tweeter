@@ -68,12 +68,16 @@
       <form method="post" action="/tweets/">
         <span class=new-tweet-header>
           <label for="tweet-text">What are you humming about?</label>
+
         </span>
         <textarea name="text" id="tweet-text" placeholder=""></textarea>
         <!-- Submit Tweet Button Here -->
         <footer>
           <span class="new-tweet-footer">
             <button type="submit">Tweet</button>
+                      
+            <!-- Hidden Message Container -->
+          <div class="message-container" style="display: none;"></div>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </span>
         </footer>
