@@ -15,6 +15,13 @@
 }
 
 /* Footer Styles */
+#message-container {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  font-family: 'source sans 3';
+}
+
 .new-tweet-footer {
   display: flex;
   justify-content: space-between;
@@ -41,10 +48,14 @@
 
 /* Counter Styles */
 .counter {
+  display: flex;
+  align-items: center;
   color: inherit;
 }
 
 .counter.negative {
+  display: flex;
+  align-items: center;
   color: tomato;
 }
 
