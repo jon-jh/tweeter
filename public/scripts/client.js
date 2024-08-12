@@ -98,16 +98,24 @@ $(document).ready(() => {
     });
   };
 
-  // Prevent the default action of 'Submit" which reloads the page. This does not prevent the data from being submitted.
 
-  // Grab the new-tweet-container to get the submit (tweet) button.
   const $form = $('.new-tweet-container');
   // Listen for submit event on the form.
   $form.on('submit', (event) => {
+    // Prevent the default action of 'Submit" which reloads the page. This does not prevent the data from being submitted.
     event.preventDefault();
+    // Use jquery to check if the .counter.negative class exists (this is how to do so), if so, alert with message and return; (nothing).
+    if ($('.counter.negative').length > 0) {
+      alert('The length of the tweet is longer than 140 :O');
+      return;
+      // Same thing but check if the value (contents of the text box) of the box label #tweet-text (id=tweet-text) is empty '' (.trim will make sure to remove any blank spaces just in case)
+    } else if ($('#tweet-text').val().trim() === '') {
+      alert('What do you want to share?');
+      return;
+    }
     const formData = $form.serialize();
     // verify the form data is being sent.
-    console.log(formData)
+    console.log(formData);
     // POST the serialized form data with ajax.
     $.ajax({
       method: 'POST',
@@ -119,8 +127,8 @@ $(document).ready(() => {
       }
 
     });
-  })
+  });
 
   // On Page Load, load tweets.
   loadTweets();
-})
+});
