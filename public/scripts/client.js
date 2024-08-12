@@ -98,8 +98,24 @@ $(document).ready(() => {
     });
   };
 
+  // Create HTML escape function so that code can not be run inside a user's tweet / post.
+
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const $form = $('.new-tweet-container');
+
+  // Allow form submission on Enter key press since 'preventDefault' is stopping it. 'Enter' && !event.shiftKey means if it's not enter+shiftkey which normally spaces a textbox to a newline instead of submitting. 
+
+  $form.on('keydown', (event) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
+      $form.submit();
+    }
+  });
   // Listen for submit event on the form.
   $form.on('submit', (event) => {
     // Prevent the default action of 'Submit" which reloads the page. This does not prevent the data from being submitted.
@@ -113,6 +129,12 @@ $(document).ready(() => {
       alert('What do you want to share?');
       return;
     }
+
+    // Change the contents of the user text box into the text returned from the escape function, which removes any HTML coding. This way it can't be run as code, it's no longer code but converted to a text message before posting.
+
+    const tweetText = escape($('#tweet-text').val().trim());
+    $('#tweet-text').val(tweetText);
+
     const formData = $form.serialize();
     // verify the form data is being sent.
     console.log(formData);
@@ -124,9 +146,17 @@ $(document).ready(() => {
       // On submit, load tweets. (no refresh)
       success: () => {
         loadTweets();
+        // on success, load tweets, but also clear the text box, ans reset the counter value to 140.
+        $('#tweet-text').val('');
+        $('.counter').val(140);
+
+
       }
 
     });
+
+
+
   });
 
   // On Page Load, load tweets.
