@@ -22,14 +22,13 @@ body {
   background-color: #1a1a1a;
   background-image: url("https://www.transparenttextures.com/patterns/dark-tire.png");
   font-size: 24px;
-  padding-top: 100px;
   font-family: 'Source Sans 3', sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- 
+
 header {
   width: 100%;
   height: 400px;
@@ -46,4 +45,28 @@ main {
   margin: 0 auto;
   background-image: inherit;
   background-color: inherit;
+}
+
+/* What am I trying to do?:
+When the screen is wider than 1024px, 
+
+- The Nav bar should appear. Else, it should dissapear.
+- The header and the main content should move into two columns, one for the left and one for the right sides of the page.*/
+
+/* Responsive Design */
+/* Desktop Formatting*/
+
+@media only screen and (min-width:1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    padding-top: 100px;
+    margin-right: 5%;
+  }
+
+  header {
+    width: 50%;
+    margin: 5%;
+    border: solid #cacae1;
+  }
 }

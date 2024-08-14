@@ -1,5 +1,5 @@
 nav {
-  display: flex;
+  display: none;
   position: fixed;
   top: 0;
   justify-content: space-between;
@@ -25,4 +25,13 @@ nav span {
   font-family: 'Source Sans 3', sans-serif;
   display: inline-block;
   text-align: center;
+}
+
+/* Responsive Design */
+/* Desktop Formatting*/
+
+@media only screen and (min-width:1024px) {
+  nav {
+    display:flex;
+  }
 }
