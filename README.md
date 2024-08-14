@@ -16,8 +16,8 @@
 - Node
 
 ### Screenshots
-!(https://github.com/jon-jh/tweeter/blob/master/docs/landscape-mode.png?raw=true)
+!["Landscape Mode"](https://github.com/jon-jh/tweeter/blob/master/docs/landscape-mode.png?raw=true)
 
-!(https://github.com/jon-jh/tweeter/blob/master/docs/hover-effect.png?raw=true)
+!["Hover Effect"](https://github.com/jon-jh/tweeter/blob/master/docs/hover-effect.png?raw=true)
 
-!(https://github.com/jon-jh/tweeter/blob/master/docs/horizontal-mode.png?raw=true)
+!["Horizontal Mode"](https://github.com/jon-jh/tweeter/blob/master/docs/horizontal-mode.png?raw=true)
