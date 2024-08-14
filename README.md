@@ -3,7 +3,7 @@
 - Focused on css design and jquery.
 - Tweets load instantly at the top without page refresh.
 - Buttons have hover effects; only ‘TWEET’ is functional.
-- Responsive design: layout and nav bar adjust for screens wider or narrower than 1024px.
+- Layout and nav bar adjust for screens wider or narrower than 1024px.
 - To run this app, clone it and install the dependencies. Run 'npm run start' from the terminal. The server is set to run on localhost:7979.
 
 ### Dependencies
