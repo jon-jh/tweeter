@@ -23,6 +23,7 @@ body {
   background-image: url("https://www.transparenttextures.com/patterns/dark-tire.png");
   font-size: 24px;
   font-family: 'Source Sans 3', sans-serif;
+  padding-top: 100px;
 }
 
 /*
@@ -50,7 +51,7 @@ main {
 /* What am I trying to do?:
 When the screen is wider than 1024px, 
 
-- The Nav bar should appear. Else, it should dissapear.
+- The Nav bar background should change. Else, it should blend in by matching the body background.
 - The header and the main content should move into two columns, one for the left and one for the right sides of the page.*/
 
 /* Responsive Design */
@@ -60,7 +61,6 @@ When the screen is wider than 1024px,
   body {
     display: flex;
     flex-direction: row;
-    padding-top: 100px;
     margin-right: 5%;
   }
 
